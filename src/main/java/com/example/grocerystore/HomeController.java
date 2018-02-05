@@ -12,9 +12,12 @@ public class HomeController {
     @Autowired
     StoreRepository storeRepository;
 
+    @Autowired
+    CosmeticRepository cosmeticRepository;
+
     @RequestMapping("/")
     public String listStore(Model model) {
-        model.addAttribute("store", storeRepository.findAll());
+//        model.addAttribute("store", storeRepository.findAll());
         return "store";
     }
 
@@ -23,10 +26,17 @@ public class HomeController {
         return "cosmetics";
     }
 
+
+    @GetMapping("/addcosmetics")
+    public String inputCosmetics(){
+        return "cosmeticsform";
+    }
+
     @GetMapping("/cleaning")
     public String shopCleaning() {
         return "cleaning";
     }
+
 
     @GetMapping("/snacks")
     public String shopSnacks() {
