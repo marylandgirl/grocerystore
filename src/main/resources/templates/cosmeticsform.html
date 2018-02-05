@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Enter Cosmetics</title>
 </head>
 <body>
-Kim This works
+
+<form action="#"
+      th:action="@{/processcosmetics}"
+      th:object="${cosmetic}"
+      method="post">
+    <input type="hidden" th:field="*{id}" />
+    Item :<input type="text" th:field="*{item}" />
+    <span th:if="${#fields.hasErrors('item')}"
+          th:errors="*{item}"></span><br />
+
+</form>
 </body>
 </html>
