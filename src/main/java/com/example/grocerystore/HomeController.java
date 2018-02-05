@@ -13,13 +13,19 @@ public class HomeController {
     StoreRepository storeRepository;
 
     @RequestMapping("/")
-    public String listStore(Model model){
+    public String listStore(Model model) {
         model.addAttribute("store", storeRepository.findAll());
         return "store";
     }
 
     @GetMapping("/cosmetics")
-    public String shopCosmetics(){
+    public String shopCosmetics() {
         return "cosmetics";
     }
+
+    @GetMapping("/cleaning")
+    public String shopCleaning() {
+        return "cleaning";
+    }
+
 }
