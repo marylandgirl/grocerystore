@@ -18,7 +18,28 @@ public class Cosmetic {
     @NotNull
     private String item;
 
+    @NotNull
+    private String brand;
+
+    @NotNull
+    private double price;
+
+    @NotNull
+    @Min(1)
+    @Max(5)
+    private int popularity;
+
+
     public Cosmetic() {
+        price=0.0;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public long getId() {
@@ -35,5 +56,21 @@ public class Cosmetic {
 
     public void setItem(String item) {
         this.item = item;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(int popularity) {
+        this.popularity = popularity;
     }
 }

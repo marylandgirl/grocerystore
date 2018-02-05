@@ -14,6 +14,16 @@
     Item :<input type="text" th:field="*{item}" />
     <span th:if="${#fields.hasErrors('item')}"
           th:errors="*{item}"></span><br />
+    Brand :<input type="text" th:field="*{brand}" />
+    <span th:if="${#fields.hasErrors('brand')}"
+          th:errors="*{brand}"></span><br />
+    Price :<input type="text" th:field="*{price}" />
+    <span th:if="${#fields.hasErrors('price')}"
+          th:errors="*{price}"></span><br />
+    Popularity  (e.g. 1 to 5, or not popular to extremely popular) :<input type="text" th:field="*{popularity}"/>
+    <span th:if="${#fields.hasErrors('popularity')}"
+          th:errors="*{popularity}"></span><br />
+    <input type="submit" value="Submit" />
 
 </form>
 </body>
