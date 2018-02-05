@@ -28,4 +28,9 @@ public class HomeController {
         return "cleaning";
     }
 
+    @GetMapping("/snacks")
+    public String shopSnacks() {
+        return "snacks";
+    }
+
 }
