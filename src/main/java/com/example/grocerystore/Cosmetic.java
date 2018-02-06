@@ -84,4 +84,6 @@ public class Cosmetic {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+
 }

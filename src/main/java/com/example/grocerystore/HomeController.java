@@ -36,6 +36,7 @@ public class HomeController {
     @GetMapping("/addcosmetics")
     public String inputCosmetics(Model model){
         model.addAttribute("cosmetic", new Cosmetic());
+        model.addAttribute("store", new Store());
         return "cosmeticsform";
     }
 
@@ -44,6 +45,8 @@ public class HomeController {
         if (result.hasErrors()){
             return "/cosmetics";
         }
+        Store store = new Store();
+
         cosmeticRepository.save(cosmetic);
         return "redirect:/";
     }
