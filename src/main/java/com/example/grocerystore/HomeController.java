@@ -46,8 +46,11 @@ public class HomeController {
             return "/cosmetics";
         }
         Store store = new Store();
-
+        store.setDeptName("Cosmetics");
+        store.setItem(cosmetic.getItem());
+        store.setPrice(cosmetic.getPrice());
         cosmeticRepository.save(cosmetic);
+        storeRepository.save(store);
         return "redirect:/";
     }
 

@@ -27,9 +27,6 @@
     <span th:if="${#fields.hasErrors('popularity')}"
           th:errors="*{popularity}"></span><br />
     <span th:object="${store}"></span><br />
-    Test  :<input type="text" th:field="*{item}"/>
-    <span th:if="${#fields.hasErrors('item')}"
-          th:errors="*{item}"></span><br />
 
     <input type="submit" value="Submit" />
 
