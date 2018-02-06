@@ -22,6 +22,9 @@ public class Cosmetic {
     private String brand;
 
     @NotNull
+    private int quantity;
+
+    @NotNull
     private double price;
 
     @NotNull
@@ -29,9 +32,9 @@ public class Cosmetic {
     @Max(5)
     private int popularity;
 
-
     public Cosmetic() {
         price=0.0;
+        quantity = 0;
     }
 
     public String getBrand() {
@@ -72,5 +75,13 @@ public class Cosmetic {
 
     public void setPopularity(int popularity) {
         this.popularity = popularity;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

@@ -44,6 +44,7 @@ public class HomeController {
         if (result.hasErrors()){
             return "/cosmetics";
         }
+        cosmeticRepository.save(cosmetic);
         return "redirect:/";
     }
 

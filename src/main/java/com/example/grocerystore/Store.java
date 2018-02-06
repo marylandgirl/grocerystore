@@ -16,8 +16,13 @@ public class Store {
     @NotNull
     private String deptName;
 
+
     @NotNull
-    private int deptID;
+    private double price;
+
+    @NotNull
+    private String item;
+
 
     public Store() {
     }
@@ -38,11 +43,19 @@ public class Store {
         this.deptName = deptName;
     }
 
-    public int getDeptID() {
-        return deptID;
+    public double getPrice() {
+        return price;
     }
 
-    public void setDeptID(int deptID) {
-        this.deptID = deptID;
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getItem() {
+        return item;
+    }
+
+    public void setItem(String item) {
+        this.item = item;
     }
 }

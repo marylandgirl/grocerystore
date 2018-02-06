@@ -17,6 +17,9 @@
     Brand :<input type="text" th:field="*{brand}" />
     <span th:if="${#fields.hasErrors('brand')}"
           th:errors="*{brand}"></span><br />
+    Quantity :<input type="text" th:field="*{quantity}" />
+    <span th:if="${#fields.hasErrors('quantity')}"
+          th:errors="*{quantity}"></span><br />
     Price :<input type="text" th:field="*{price}" />
     <span th:if="${#fields.hasErrors('price')}"
           th:errors="*{price}"></span><br />
